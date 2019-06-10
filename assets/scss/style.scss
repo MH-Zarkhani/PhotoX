@@ -141,7 +141,7 @@ header {
 
 .card-shadow {
   box-shadow: 1px 2px 5px #444;
-  transition: all .5s;
+  transition: all 0.5s;
   &:hover {
     box-shadow: 5px 8px 35px #444;
   }
@@ -160,4 +160,27 @@ header {
       opacity: 1;
     }
   }
+}
+
+// gallery style
+
+.underline-dark {
+  width: 150px;
+  border: 1px solid #888;
+  margin: auto;
+}
+
+.gallery-list-item {
+  color: #777;
+  cursor: pointer;
+  user-select: none;
+}
+
+.active-item {
+  color: #70aed2;
+}
+
+.filter {
+  padding: 2px;
+  cursor: pointer;
 }

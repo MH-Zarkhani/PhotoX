@@ -99,7 +99,7 @@ header {
     transform: translateX(0); } }
 .card-shadow {
   box-shadow: 1px 2px 5px #444;
-  transition: all .5s; }
+  transition: all 0.5s; }
   .card-shadow:hover {
     box-shadow: 5px 8px 35px #444; }
   .card-shadow h5 {
@@ -115,3 +115,20 @@ header {
     transition: all 0.5s; }
     .card-shadow h5:hover {
       opacity: 1; }
+
+.underline-dark {
+  width: 150px;
+  border: 1px solid #888;
+  margin: auto; }
+
+.gallery-list-item {
+  color: #777;
+  cursor: pointer;
+  user-select: none; }
+
+.active-item {
+  color: #70aed2; }
+
+.filter {
+  padding: 2px;
+  cursor: pointer; }
