@@ -136,3 +136,28 @@ header {
     transform: translateX(0);
   }
 }
+
+//collection style
+
+.card-shadow {
+  box-shadow: 1px 2px 5px #444;
+  transition: all .5s;
+  &:hover {
+    box-shadow: 5px 8px 35px #444;
+  }
+  h5 {
+    position: absolute;
+    top: 70%;
+    right: 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: #222;
+    width: 70%;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.5s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
