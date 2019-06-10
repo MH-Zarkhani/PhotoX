@@ -10,7 +10,9 @@ $(document).ready(function() {
   $(window).scroll(function() {
     let currentPosition = $(this).scrollTop();
     // navbar-menu when scrolled
-    if (currentPosition > 200) {
+    console.log(currentPosition);
+    
+    if(currentPosition > 200) {
       $("#nav-menu").addClass("custom-navbar");
     } else {
       $("#nav-menu").removeClass("custom-navbar");
@@ -22,6 +24,13 @@ $(document).ready(function() {
       }else{
         $('#nav-menu').addClass("fade");
       }
+    }
+    if(currentPosition > 650) {
+      $('.camera-img').addClass('fromLeft');
+      $('.camera-text').addClass('fromRight');
+    }else {
+      $('.camera-img').removeClass('fromLeft');
+      $('.camera-text').removeClass('fromRight');
     }
     previousPosition = currentPosition;
   });

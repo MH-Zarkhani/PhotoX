@@ -100,7 +100,39 @@ header {
 }
 
 .underline {
-    width: 150px;
-    border: 1px solid #eee;
-    margin: auto;
+  width: 150px;
+  border: 1px solid #eee;
+  margin: auto;
+}
+
+// camera
+
+.fromLeft {
+  animation: fromLeft 3s;
+}
+
+@keyframes fromLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fromRight {
+  animation: fromRight 3s;
+}
+
+@keyframes fromRight {
+  0% {
+    opacity: 0;
+    transform: translate(300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
