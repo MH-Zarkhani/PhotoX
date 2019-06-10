@@ -6,13 +6,23 @@ $(document).ready(function() {
       .toggleClass("clicked");
   });
   // when scrolled!
+  let previousPosition = 0;
   $(window).scroll(function() {
-    let position = $(this).scrollTop();
+    let currentPosition = $(this).scrollTop();
     // navbar-menu when scrolled
-    if (position > 200) {
+    if (currentPosition > 200) {
       $("#nav-menu").addClass("custom-navbar");
     } else {
       $("#nav-menu").removeClass("custom-navbar");
     }
+    if(currentPosition > 500) {
+      $('#nav-menu').addClass("fade");
+      if( previousPosition > currentPosition){
+        $('#nav-menu').removeClass("fade");
+      }else{
+        $('#nav-menu').addClass("fade");
+      }
+    }
+    previousPosition = currentPosition;
   });
 });
