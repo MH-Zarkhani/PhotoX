@@ -305,20 +305,29 @@ header {
 }
 
 .input:placeholder-shown + .label {
-  transform: translate(5px , 5px);
+  transform: translate(5px, 5px);
   opacity: 0;
   visibility: hidden;
 }
 
-@media (max-width:992px) {
+@media (max-width: 992px) {
   #contact {
-    background: linear-gradient(
-      rgba(21, 31, 32, 1), 
-      rgba(21, 31, 32, 0.95) 
-    );
+    background: linear-gradient(rgba(21, 31, 32, 1), rgba(21, 31, 32, 0.95));
     .contact-form {
       width: 80%;
       margin: auto;
     }
+  }
+}
+
+// footer style
+
+.footer-link {
+  color: #eee;
+  font-size: 13px;
+  transition: all 0.3s;
+  &:hover {
+    color: #70aed2;
+    text-decoration: none;
   }
 }

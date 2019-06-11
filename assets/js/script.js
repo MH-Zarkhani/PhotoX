@@ -15,7 +15,7 @@ $(document).ready(function() {
     } else {
       $("#nav-menu").removeClass("custom-navbar");
     }
-    // show or fade navbar menu 
+    // show or fade navbar menu
     if (currentPosition > 500) {
       $("#nav-menu").addClass("fade");
       if (previousPosition > currentPosition) {
@@ -24,7 +24,7 @@ $(document).ready(function() {
         $("#nav-menu").addClass("fade");
       }
     }
-    // animation for camera 
+    // animation for camera
     if (currentPosition > 650) {
       $(".camera-img").addClass("fromLeft");
       $(".camera-text").addClass("fromRight");
@@ -34,7 +34,7 @@ $(document).ready(function() {
     }
     // animation for pricing card
     console.log(currentPosition);
-    
+
     if (currentPosition > 4500) {
       $(".card-1").addClass("moveFromLeft");
       $(".card-2").addClass("moveFromBottom");
@@ -69,3 +69,8 @@ $(document).ready(function() {
     }
   });
 });
+
+// footer
+
+const date = new Date().getFullYear();
+$(".date").text(date);
