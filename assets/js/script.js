@@ -15,6 +15,7 @@ $(document).ready(function() {
     } else {
       $("#nav-menu").removeClass("custom-navbar");
     }
+    // show or fade navbar menu 
     if (currentPosition > 500) {
       $("#nav-menu").addClass("fade");
       if (previousPosition > currentPosition) {
@@ -23,12 +24,25 @@ $(document).ready(function() {
         $("#nav-menu").addClass("fade");
       }
     }
+    // animation for camera 
     if (currentPosition > 650) {
       $(".camera-img").addClass("fromLeft");
       $(".camera-text").addClass("fromRight");
     } else {
       $(".camera-img").removeClass("fromLeft");
       $(".camera-text").removeClass("fromRight");
+    }
+    // animation for pricing card
+    console.log(currentPosition);
+    
+    if (currentPosition > 4500) {
+      $(".card-1").addClass("moveFromLeft");
+      $(".card-2").addClass("moveFromBottom");
+      $(".card-3").addClass("moveFromRight");
+    } else {
+      $(".card-1").removeClass("moveFromLeft");
+      $(".card-2").removeClass("moveFromBottom");
+      $(".card-3").removeClass("moveFromRight");
     }
     previousPosition = currentPosition;
   });
