@@ -227,7 +227,6 @@ header {
   animation: moveFromRight 2s;
 }
 
-
 @keyframes moveFromLeft {
   0% {
     opacity: 0;
@@ -258,5 +257,68 @@ header {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+// contact style
+
+#contact {
+  background: linear-gradient(
+      105deg,
+      rgba(21, 31, 32, 1) 0%,
+      rgba(21, 31, 32, 0.95) 50%,
+      transparent 50%
+    ),
+    url(/assets/img/contact.jpg) no-repeat center / cover;
+  .input {
+    background: transparent;
+    border-color: transparent;
+    border-bottom: 2px solid #eee;
+    border-radius: 0;
+    &:focus {
+      background: transparent;
+      border-color: transparent;
+      box-shadow: none;
+      color: #fff;
+      border-bottom: 2px solid #f5593d;
+    }
+  }
+}
+
+.submit-button {
+  background: #f5593d;
+  color: #eee;
+  transition: all 0.3s;
+  &:hover {
+    background: #f9793d;
+    transform: translateY(-1px);
+  }
+}
+
+.label {
+  color: #777;
+  display: block;
+  margin-top: -70px;
+  margin-left: 4px;
+  font-size: 13px;
+  transition: all 0.3s;
+}
+
+.input:placeholder-shown + .label {
+  transform: translate(5px , 5px);
+  opacity: 0;
+  visibility: hidden;
+}
+
+@media (max-width:992px) {
+  #contact {
+    background: linear-gradient(
+      rgba(21, 31, 32, 1), 
+      rgba(21, 31, 32, 0.95) 
+    );
+    .contact-form {
+      width: 80%;
+      margin: auto;
+    }
   }
 }
